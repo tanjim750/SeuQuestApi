@@ -1,4 +1,11 @@
-# SEUQuest ChatBot API for Multi-Platform Conversations
+<h3 align="center">SEUQuest</h3>
+
+<p align="center">
+  
+  <img src="https://github.com/tanjim750/SeuQuest/blob/main/seu_logo.png" alt="SEUQuest" width="100" height="100"/>
+</p>
+
+## SEUQuest ChatBot API for Multi-Platform Conversations
 
 Welcome to the ChatBot API, a versatile and user-friendly tool for enabling interactive conversations across multiple platforms. This API allows you to integrate a powerful chatbot into various applications, making it easy to engage users in dynamic and informative conversations.
 

@@ -43,6 +43,3 @@ We welcome contributions from the development community. If you'd like to contri
 
 This project is available for commercial use under a proprietary license. Please contact us for licensing details and pricing.
 
-## Acknowledgments
-
-We extend our gratitude to the developers and contributors who have made this project possible.

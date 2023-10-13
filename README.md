@@ -10,10 +10,10 @@ Welcome to the ChatBot API, a versatile and user-friendly tool for enabling inte
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## Features
 
+- **Web User Interface:** A user friendly web interface. With this web interface users will be able to get their API and control, chatbot performance, user Reviews for the bot, and more.
 - **Multi-Platform Support:** This chatbot API works seamlessly across platforms, including Telegram, web applications, mobile apps, and more.
 - **Customizable Responses:** Tailor the chatbot's responses to match your application's context and style.
 - **Scalable and User-Friendly:** You can handle multiple users and conversations concurrently while providing a great user experience.
@@ -25,7 +25,7 @@ Welcome to the ChatBot API, a versatile and user-friendly tool for enabling inte
 - Python
 - Django
 - REST API
-- Telegram Bot API (for Telegram integration)
+- JWT Authentication
 
 ## Getting Started
 

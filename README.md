@@ -1,4 +1,4 @@
-<h3 align="center">SEUQuest chatbot API</h3>
+<h3 align="center">SEUQuest API</h3>
 
 <p align="center">
   

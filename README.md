@@ -1,8 +1,8 @@
-<h3 align="center">SEUQuest</h3>
+<h3 align="center">SEUQuest chatbot API</h3>
 
 <p align="center">
   
-  <img src="https://github.com/tanjim750/SeuQuest/blob/main/seu_logo.png" alt="SEUQuest chatbot API" width="100" height="100"/>
+  <img src="https://github.com/tanjim750/SeuQuest/blob/main/seu_logo.png" alt="SEUQuest" width="100" height="100"/>
 </p>
 
 ## SEUQuest ChatBot API for Multi-Platform Conversations

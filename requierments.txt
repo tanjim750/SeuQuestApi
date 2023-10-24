@@ -1,0 +1,16 @@
+Django
+djangorestframework
+djangorestframework-simplejwt
+requests
+rest-framework-simplejwt
+langchain 
+sentence-transformers 
+InstructorEmbedding 
+beautifulsoup4 
+qdrant_client 
+faiss-cpu 
+spacy 
+PyPDF2 
+openai 
+tiktoken 
+transformers

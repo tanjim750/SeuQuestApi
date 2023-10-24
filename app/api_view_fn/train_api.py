@@ -17,7 +17,7 @@ qdrant.load(collection_name=collection_name)
 class TrainView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
+    def post(self, request):
         try:
             is_trainer = request.user.is_superuser
             if not is_trainer:

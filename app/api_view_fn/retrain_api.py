@@ -93,10 +93,10 @@ def find_highest_similarity(source_sen,compare_sen):
   return (height_similarity_score,index_of_similar_sen)
 
 def retrain_with_new_data(query,metadata,data):
-    data = seu_quest.text_cleaner(data)
-    filter_ = seu_quest.qdrant_metadata_filtering(metadata)
+    data = SeuQuest.text_cleaner(data)
+    filter_ = SeuQuest.qdrant_metadata_filtering(metadata)
 
-    query_vector = seu_quest.embeddings.embed_query(query)
+    query_vector = SeuQuest.embeddings.embed_query(query)
     client = qdrant.client_
     hits = client.search(
         collection_name=collection_name,
@@ -140,12 +140,11 @@ def retrain_with_new_data(query,metadata,data):
 
         new_content = "".join(split_content)
         contents[content_index] = new_content
-        final_contents = "".join(contents)
+        final_contents = "\n".join(contents)
 
-        payload = {"metadata":content_metadata,"page_content":"\n "+final_contents}
+        payload = {"metadata":content_metadata,"page_content":final_contents}
 
         qdrant.overwrite_payload(collection_name=collection_name,points=[vector_point],payload=payload)
-
         return True
 
     else:
@@ -156,7 +155,7 @@ def retrain_with_new_data(query,metadata,data):
 class RetrainView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request):
+    def post(self, request):
         is_trainer = request.user.is_superuser
         if not is_trainer:
             return Response({"status":"Failed","details": "The user do not have the training access "}, status=status.HTTP_401_UNAUTHORIZED)
@@ -168,9 +167,9 @@ class RetrainView(APIView):
         if data is None:
             return Response({"status":"Failed","details": "Required parameter missing.","parameter":"data"}, status=status.HTTP_400_BAD_REQUEST)
         
-        get_con = Conversation.objects.filter(user = request.user, id=con_id)
+        get_con = Conversation.objects.filter(id=con_id)
         if not get_con.exists():
-            return Response({"status":"Failed","details": "User or id not exists."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status":"Failed","details": "Given id does not exists."}, status=status.HTTP_400_BAD_REQUEST)
         
         get_con = get_con.first()
         query = get_con.human_query
